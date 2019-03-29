@@ -1,0 +1,31 @@
+{
+  "name": "@blackfalcon/npmdemo",
+  "version": "0.0.0",
+  "description": "simple code for npm build example",
+  "main": "./src",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blackfalcon/npmBuildDemo"
+  },
+  "scripts": {
+    "buildCss": "sass ./src/:./dist/",
+    "buildWatch": "nodemon -e scss --watch src  --exec npm run buildCss",
+    "dist": "node scripts/dist.js $TRAVIS_BUILD_ID"
+  },
+  "author": "Dale Sande",
+  "license": "ISC",
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "nodemon": "^1.18.10",
+    "sass": "^1.17.3",
+    "versiony-cli": "^1.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "dart sass",
+    "npmdemo",
+    "css"
+  ]
+}
